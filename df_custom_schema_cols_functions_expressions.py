@@ -49,27 +49,27 @@ emp_df.select(col("empno"), col("first_name"), col("job"), col("sal"), col("dept
 # permissive
 
 # emp_df = spark.read.format("csv").option("header", "true").option("mode", "permissive") \
-#     .load("C:/Users/91846/OneDrive/Desktop/GCP/test_emp.txt")
+#     .load("C:/Users/test_emp.txt")
 # emp_df.printSchema()
 # emp_df.show()
 
 # dropmalformed
 
 # emp_df = spark.read.format("csv").option("header", "true").option("mode", "dropmalformed") \
-#     .load("C:/Users/91846/OneDrive/Desktop/GCP/test_emp.txt")
+#     .load("C:/Users/test_emp.txt")
 # emp_df.printSchema()
 # emp_df.show()
 
 #emp_df = spark.read.format("csv").option("header", "true").option("mode", "failfast") \
-#    .load("C:/Users/91846/OneDrive/Desktop/GCP/test_emp.txt")
+#    .load("C:/Users/GCP/test_emp.txt")
 #emp_df.printSchema()
 #emp_df.show()
 ##------------------------------------------------------------------------------------------------
 
 spark2 = SparkSession.builder.appName('SparkByExamples.com').getOrCreate()
 
-data = [(None, None), ("null", ""), ("NULL", ""), ("null", None), ("NULL", None), ("", ""), (" ", " "), (1, "lakshmi"),
-        (2, "vijay"), ("", "sai")]
+data = [(None, None), ("null", ""), ("NULL", ""), ("null", None), ("NULL", None), ("", ""), (" ", " "), (1, "lak"),
+        (2, "viy"), ("", "sa")]
 
 schema = StructType([
     StructField('cno', StringType(), True),
